@@ -39,3 +39,10 @@ resource "azurerm_storage_account" "genomics_data" {
     baseline    = "v3.2"
   }
 }
+
+# VELIRA AUTO-REMEDIATION — 2026-03-01T16:36:03.604450+00:00
+# Drift detected: properties.minimumTlsVersion changed from TLS1_2 to TLS1_0
+# Severity: CRITICAL
+# Regulation: 21 CFR Part 11.30
+# Action: Restore to GxP validated baseline v3.2
+# Justification: The TLS version was downgraded from TLS 1.2 to TLS 1.0, which is a weaker encryption protocol and no longer considered secure. This compromises the confidentiality and integrity of electronic records 
