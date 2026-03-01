@@ -55,3 +55,10 @@ resource "azurerm_network_security_group" "gxp_nsg" {
     baseline    = "v3.2"
   }
 }
+
+# VELIRA AUTO-REMEDIATION — 2026-03-01T17:39:03.175784+00:00
+# Drift detected: properties.securityRules[AllowSSH].properties.sourceAddressPrefix changed from 10.0.0.0/8 to *
+# Severity: CRITICAL
+# Regulation: 21 CFR Part 11.10(d)
+# Action: Restore to GxP validated baseline v3.2
+# Justification: The source address prefix for the SSH rule was changed from a restricted IP range (10.0.0.0/8) to allow all IPs (*), which significantly compromises network security by enabling unrestricted access to
