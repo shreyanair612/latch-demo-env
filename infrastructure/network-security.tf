@@ -55,3 +55,10 @@ resource "azurerm_network_security_group" "gxp_nsg" {
     baseline    = "v3.2"
   }
 }
+
+# VELIRA AUTO-REMEDIATION — 2026-03-01T16:36:22.642630+00:00
+# Drift detected: properties.securityRules[AllowAll8080].properties.direction changed from None to Inbound
+# Severity: CRITICAL
+# Regulation: 21 CFR Part 11.10(a), 21 CFR Part 11.10(d)
+# Action: Restore to GxP validated baseline v3.2
+# Justification: The change allows inbound traffic on port 8080, which was previously not permitted. This compromises the confidentiality and integrity of the system by potentially exposing it to unauthorized access.
