@@ -39,3 +39,10 @@ resource "azurerm_storage_account" "genomics_data" {
     baseline    = "v3.2"
   }
 }
+
+# VELIRA AUTO-REMEDIATION — 2026-03-01T17:39:03.175784+00:00
+# Drift detected: properties.encryption.services.file.enabled changed from True to False
+# Severity: CRITICAL
+# Regulation: 21 CFR Part 11.30
+# Action: Restore to GxP validated baseline v3.2
+# Justification: The encryption for file services in the storage account has been disabled, compromising the confidentiality and integrity of electronic records stored in the FDA-validated production environment.
