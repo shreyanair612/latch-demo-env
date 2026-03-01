@@ -18,7 +18,7 @@ resource "azurerm_storage_account" "genomics_data" {
   }
 
   # Public access — must be disabled for regulated data
-  allow_nested_items_to_be_public = true
+  allow_nested_items_to_be_public = false
 
   # TLS — minimum TLS 1.2 required
   min_tls_version = "TLS1_2"
