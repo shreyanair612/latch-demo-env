@@ -9,3 +9,10 @@ resource "azurerm_role_assignment" "qa_manager" {
   role_definition_name = "Storage Blob Data Contributor"
   principal_id         = "11111111-1111-1111-1111-111111111111"
 }
+
+# VELIRA AUTO-REMEDIATION — 2026-03-01T22:05:26.319262+00:00
+# Drift detected: properties.scope changed from /subscriptions/a1b2c3d4/resourceGroups/gxp-prod to /subscriptions/a1b2c3d4
+# Severity: CRITICAL
+# Regulation: 21 CFR Part 11.10(d)
+# Action: Restore to GxP validated baseline v3.2
+# Justification: The scope of the role assignment for pipeline-deployer was changed from a resource group level to a subscription level, significantly broadening access permissions. This violates the principle of leas
