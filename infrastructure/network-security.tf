@@ -55,3 +55,10 @@ resource "azurerm_network_security_group" "gxp_nsg" {
     baseline    = "v3.2"
   }
 }
+
+# VELIRA AUTO-REMEDIATION — 2026-03-01T18:17:13.102611+00:00
+# Drift detected: properties.securityRules[AllowPort8080].properties.destinationAddressPrefix changed from None to *
+# Severity: CRITICAL
+# Regulation: 21 CFR Part 11.10(a), 21 CFR Part 11.10(d)
+# Action: Restore to GxP validated baseline v3.2
+# Justification: The destination address prefix for the security rule 'AllowPort8080' was changed from 'None' to '*', allowing unrestricted access to port 8080. This compromises the confidentiality and integrity of th
