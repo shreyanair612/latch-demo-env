@@ -39,3 +39,10 @@ resource "azurerm_storage_account" "genomics_data" {
     baseline    = "v3.2"
   }
 }
+
+# VELIRA AUTO-REMEDIATION — 2026-03-01T17:43:59.494315+00:00
+# Drift detected: properties.allowBlobPublicAccess changed from False to True
+# Severity: CRITICAL
+# Regulation: 21 CFR Part 11.10(a)
+# Action: Restore to GxP validated baseline v3.2
+# Justification: The 'allowBlobPublicAccess' attribute was changed from 'False' to 'True', enabling public access to sensitive genomic data stored in the production environment. This compromises confidentiality and in
