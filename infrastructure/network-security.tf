@@ -55,3 +55,10 @@ resource "azurerm_network_security_group" "gxp_nsg" {
     baseline    = "v3.2"
   }
 }
+
+# VELIRA AUTO-REMEDIATION — 2026-03-01T16:30:52.201853+00:00
+# Drift detected: properties.securityRules[AllowAll8080].name changed from None to AllowAll8080
+# Severity: CRITICAL
+# Regulation: 21 CFR Part 11.10(a), 21 CFR Part 11.10(d)
+# Action: Restore to GxP validated baseline v3.2
+# Justification: A new security rule 'AllowAll8080' was added to the network security group, which permits unrestricted access to port 8080. This compromises the confidentiality and integrity of the system by potentia
