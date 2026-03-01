@@ -39,3 +39,10 @@ resource "azurerm_storage_account" "genomics_data" {
     baseline    = "v3.2"
   }
 }
+
+# VELIRA AUTO-REMEDIATION — 2026-03-01T17:43:59.494315+00:00
+# Drift detected: properties.networkAcls.virtualNetworkRules[0].id changed from /subscriptions/a1b2c3d4/resourceGroups/gxp-prod/providers/Microsoft.Network/virtualNetworks/gxp-vnet/subnets/data-subnet to None
+# Severity: CRITICAL
+# Regulation: 21 CFR Part 11.10(a), 21 CFR Part 11.10(d)
+# Action: Restore to GxP validated baseline v3.2
+# Justification: The virtual network rule for the storage account has been removed, leaving the resource without network restrictions. This compromises the confidentiality and integrity of the electronic records store
