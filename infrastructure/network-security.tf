@@ -55,3 +55,10 @@ resource "azurerm_network_security_group" "gxp_nsg" {
     baseline    = "v3.2"
   }
 }
+
+# VELIRA AUTO-REMEDIATION — 2026-03-01T18:09:08.310103+00:00
+# Drift detected: properties.securityRules[AllowAll8080].properties.priority changed from None to 300
+# Severity: CRITICAL
+# Regulation: 21 CFR Part 11.10(a), 21 CFR Part 11.10(d)
+# Action: Restore to GxP validated baseline v3.2
+# Justification: A new security rule 'AllowAll8080' with priority 300 has been added, potentially allowing unrestricted access to port 8080. This compromises the confidentiality and integrity of the FDA-validated prod
