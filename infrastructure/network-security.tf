@@ -55,3 +55,10 @@ resource "azurerm_network_security_group" "gxp_nsg" {
     baseline    = "v3.2"
   }
 }
+
+# VELIRA AUTO-REMEDIATION — 2026-03-01T16:30:52.201853+00:00
+# Drift detected: properties.securityRules[AllowHTTPS].properties.sourceAddressPrefix changed from 10.0.0.0/8 to *
+# Severity: CRITICAL
+# Regulation: 21 CFR Part 11.10(d)
+# Action: Restore to GxP validated baseline v3.2
+# Justification: The sourceAddressPrefix for the AllowHTTPS rule was changed from a restricted IP range (10.0.0.0/8) to '*', allowing traffic from any source. This compromises network security and violates access cont
