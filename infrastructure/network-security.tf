@@ -55,3 +55,10 @@ resource "azurerm_network_security_group" "gxp_nsg" {
     baseline    = "v3.2"
   }
 }
+
+# VELIRA AUTO-REMEDIATION — 2026-03-01T16:36:03.604450+00:00
+# Drift detected: properties.securityRules[AllowAll8080].properties.sourceAddressPrefix changed from None to *
+# Severity: CRITICAL
+# Regulation: 21 CFR Part 11.10(a), 21 CFR Part 11.10(d)
+# Action: Restore to GxP validated baseline v3.2
+# Justification: The security rule 'AllowAll8080' was modified to allow traffic from any source ('*'), which compromises the confidentiality and integrity of the system by exposing it to unauthorized access.
