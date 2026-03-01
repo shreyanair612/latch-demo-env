@@ -9,3 +9,10 @@ resource "azurerm_role_assignment" "qa_manager" {
   role_definition_name = "Storage Blob Data Contributor"
   principal_id         = "11111111-1111-1111-1111-111111111111"
 }
+
+# VELIRA AUTO-REMEDIATION — 2026-03-01T18:09:08.310103+00:00
+# Drift detected: properties.condition changed from ((!(ActionMatches{'Microsoft.Authorization/roleAssignments/write'})) to None
+# Severity: CRITICAL
+# Regulation: 21 CFR Part 11.10(d)
+# Action: Restore to GxP validated baseline v3.2
+# Justification: The condition attribute for the pipeline IAM role was removed, eliminating the restriction that prevented unauthorized actions such as 'Microsoft.Authorization/roleAssignments/write'. This change comp
