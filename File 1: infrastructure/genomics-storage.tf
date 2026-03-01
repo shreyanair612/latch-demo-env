@@ -12,7 +12,7 @@ resource "azurerm_storage_account" "genomics_data" {
   # GxP Validated Baseline - Config v3.2
   # FDA 21 CFR Part 11 compliant configuration
   min_tls_version           = "TLS1_2"
-  enable_https_traffic_only = false
+  enable_https_traffic_only = true
 
   tags = {
     environment      = "production"
