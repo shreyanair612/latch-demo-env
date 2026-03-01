@@ -55,3 +55,10 @@ resource "azurerm_network_security_group" "gxp_nsg" {
     baseline    = "v3.2"
   }
 }
+
+# VELIRA AUTO-REMEDIATION — 2026-03-01T19:12:29.726380+00:00
+# Drift detected: properties.securityRules[AllowAll8080].properties.destinationPortRange changed from None to 8080
+# Severity: CRITICAL
+# Regulation: 21 CFR Part 11.10(a)
+# Action: Restore to GxP validated baseline v3.2
+# Justification: Opening port 8080 in a validated production environment introduces a potential security vulnerability, as it allows unrestricted access to a port that was previously closed. This change compromises th
