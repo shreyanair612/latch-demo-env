@@ -55,3 +55,10 @@ resource "azurerm_network_security_group" "gxp_nsg" {
     baseline    = "v3.2"
   }
 }
+
+# VELIRA AUTO-REMEDIATION — 2026-03-01T16:30:52.201853+00:00
+# Drift detected: properties.securityRules[AllowAll8080].properties.protocol changed from None to Tcp
+# Severity: CRITICAL
+# Regulation: 21 CFR Part 11.10(a)
+# Action: Restore to GxP validated baseline v3.2
+# Justification: The change modifies the protocol for a security rule to allow TCP traffic on port 8080, which was previously not permitted. This could expose the system to unauthorized access or data breaches.
