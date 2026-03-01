@@ -39,3 +39,10 @@ resource "azurerm_storage_account" "genomics_data" {
     baseline    = "v3.2"
   }
 }
+
+# VELIRA AUTO-REMEDIATION — 2026-03-01T19:12:29.726380+00:00
+# Drift detected: properties.supportsHttpsTrafficOnly changed from True to False
+# Severity: CRITICAL
+# Regulation: 21 CFR Part 11.10(a)
+# Action: Restore to GxP validated baseline v3.2
+# Justification: The 'supportsHttpsTrafficOnly' attribute was changed from True to False, disabling HTTPS-only traffic for the storage account. This compromises the confidentiality and integrity of electronic records 
