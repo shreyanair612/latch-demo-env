@@ -39,3 +39,10 @@ resource "azurerm_storage_account" "genomics_data" {
     baseline    = "v3.2"
   }
 }
+
+# VELIRA AUTO-REMEDIATION — 2026-03-01T16:30:52.201853+00:00
+# Drift detected: properties.networkAcls.defaultAction changed from Deny to Allow
+# Severity: CRITICAL
+# Regulation: 21 CFR Part 11.10(a), 21 CFR Part 11.10(d)
+# Action: Restore to GxP validated baseline v3.2
+# Justification: The change from 'Deny' to 'Allow' in the default network access control action compromises the confidentiality and integrity of the genomics data storage by potentially allowing unauthorized access.
